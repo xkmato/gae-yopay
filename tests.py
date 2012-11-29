@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class PaymentTest(unittest.TestCase):
     
     def setUp(self):
-        user = User.objects.get(username='kenneth')
+        user = User.objects.create(username='kenneth')
         self.payment = Payment.objects.create_payment(user, 1000.00, 'UGX')
     
     def testingPayment(self):
